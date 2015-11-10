@@ -1,6 +1,4 @@
-FactoryGirl.define do  factory :course do
-    
-  end
+FactoryGirl.define do  
 
 
 	factory :user do
@@ -11,6 +9,13 @@ FactoryGirl.define do  factory :course do
 		password_confirmation "testpassword1"
 	end
 
+	factory :course do
+		title "Intro to Life"
+
+		description "Will teach you all about life"
+
+		cost 10.00
+	end
 
 
 end
