@@ -12,8 +12,8 @@ test "course new page" do
 end
 
 test "created new course & added it to db" do
-	user = FactoryGirl.create(:user)
-	sign_in user
+	@user = FactoryGirl.create(:user)
+	sign_in @user
 
 	assert_difference 'Course.count' do
 		post :create, {:course => {
@@ -23,9 +23,9 @@ test "created new course & added it to db" do
 			}
 		}
 	end
-	assert_redirected_to instructor_course_path(assigns(:course))
+	assert_redirected_to instructor_course_path(Course.last)
 
-	assert_equal 1, Course.count
+	assert_equal 1, @user.courses.count
 end
 
 test "course show page" do

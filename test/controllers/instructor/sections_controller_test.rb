@@ -30,6 +30,14 @@ class Instructor::SectionsControllerTest < ActionController::TestCase
   	
   end
 
+  test "new course section not signed_in" do
+  	@course = FactoryGirl.create(:course)
+
+  	assert_difference("Section.count") do
+  		post :create, course_id: @course.id, section: { title: "Chapter 1"}
+  	end
+
+  	assert_redirected_to new_user_session_path
 
 
 end

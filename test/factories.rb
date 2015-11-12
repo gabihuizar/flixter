@@ -1,4 +1,8 @@
-FactoryGirl.define do  factory :section do
+FactoryGirl.define do  
+    
+
+  factory :section do
+  	title "Chapter 1"
     
   end
   
