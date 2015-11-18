@@ -1,6 +1,11 @@
 FactoryGirl.define do  
     
 
+	factory :lesson do
+		title "Lesson 1"
+		subtitle "subtitle"
+	end
+
   factory :section do
   	title "Chapter 1"
     
