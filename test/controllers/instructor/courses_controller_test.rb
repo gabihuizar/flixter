@@ -28,6 +28,7 @@ test "created new course & added it to db" do
 	assert_equal 1, @user.courses.count
 end
 
+=begin
 test "course show page" do
   	user = FactoryGirl.create(:user)
   	sign_in user
@@ -37,7 +38,7 @@ test "course show page" do
   	get :show, :id => course.id
   	assert_response :success
   end
-
+=end
 
 test "course new page redirect to sign in" do
   	get :new

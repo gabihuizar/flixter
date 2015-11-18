@@ -2,7 +2,9 @@ require 'test_helper'
 
 class CourseTest < ActiveSupport::TestCase
   test "instructor includes all parameters" do
-  	course = Course.create(title: 'Intro to Life', description: 'Learn all about life', cost: 10.00)
+  	course = Course.create(title: 'Intro to Life', 
+  		description: 'Learn all about life', 
+  		cost: 10.00)
   	assert course.valid?
   	
   end

@@ -1,7 +1,7 @@
 require 'test_helper'
 
-=begin
 class UserTest < ActiveSupport::TestCase
+=begin
 	test "new user registration" do 
 		user = FactoryGirl.create(:user)
 
@@ -9,5 +9,6 @@ class UserTest < ActiveSupport::TestCase
 		assert_redirected_to root_path
 		assert_response :success
 	end
-end
 =end
+end
+
