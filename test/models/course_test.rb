@@ -9,8 +9,8 @@ class CourseTest < ActiveSupport::TestCase
   	
   end
 
-  test "instructor doesn't include all parameters" do 
-  	course = Course.create(title: 'Intro to Life')
+  test "instructor doesn't include description" do 
+  	course = Course.create(title: 'Intro to Life', cost: 10.00)
   	assert_not course.valid?
   end
 end
