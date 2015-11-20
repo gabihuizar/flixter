@@ -3,12 +3,14 @@ require 'test_helper'
 class LessonsControllerTest < ActionController::TestCase
 	  test "lesson show page" do
 	  	user = FactoryGirl.create(:user)
-	  	sign_in user
+	  	student = FactoryGirl.create(:user)
+	  	sign_in student
 
 	  	course = FactoryGirl.create(:course, :user => user)
 	  	section = FactoryGirl.create(:section, :course => course)
 	  	lesson = FactoryGirl.create(:lesson, :section => section)
 	  	
+	  	course.enrollments.create(:user => student)
 	  	get :show, :id => lesson.id
 	  	assert_response :success
 	  end
