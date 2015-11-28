@@ -30,5 +30,5 @@ class Instructor::SectionsControllerTest < ActionController::TestCase
 
   	assert_redirected_to new_user_session_path
   
-end
+  end
 end
