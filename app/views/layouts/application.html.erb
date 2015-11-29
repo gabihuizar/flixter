@@ -66,9 +66,46 @@
 
 <div id = 'footer'>
   <div class = 'container'>
-    <b>Teachers</b>
-    <br />
-    <%= link_to 'Teach a Course', new_instructor_course_path %>
+    <div class = 'col-xs-12 col-sm-3'>
+      <b>Teachers</b>
+      <br />
+      <%= link_to 'Teach a Course', new_instructor_course_path %>
+      <br />
+      <%= link_to "My Dashboard", dashboard_path %>
+    </div>
+    <div class = 'col-xs-12 col-sm-3'>
+      <b>About</b>
+      <br />
+      <%= link_to 'Team', '#' %>
+      <br />
+      <%= link_to 'Careers', '#' %>
+      <br />
+      <%= link_to 'Privacy Policy', '#' %>
+    </div>
+    <div class = 'col-xs-12 col-sm-3'>
+      <b>Contact</b>
+      <br />
+      gabriellacastaneda@gmail.com
+      <br />
+      Long Beach, CA
+    </div>
+    <div class = 'col-xs-12 col-sm-3 social'>
+      <b>Social</b>
+      <br />
+      <br />
+      <%= link_to 'https://instagram.com/gabihuizar', :target => "_blank" do %>
+        <%= image_tag 'instagram.png', :class => 'social-button' %>
+      <% end %>
+      <%= link_to 'https://twitter.com/gabihuizar', :target => "_blank" do %>
+        <%= image_tag 'twitter.png', :class => 'social-button' %>
+      <% end %>
+      <%= link_to 'http://acodingtaco.com', :target => "_blank" do %>
+        <%= image_tag 'wordpress.png', :class => 'social-button' %>
+      <% end %>
+      <%= link_to 'https://github.com/gabihuizar', :target => "_blank" do %>
+        <%= image_tag 'Github.png', :class => 'social-button' %>
+      <% end %>
+    </div>
   </div>
 </div>
 
