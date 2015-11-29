@@ -14,6 +14,7 @@ class LessonsControllerTest < ActionController::TestCase
 	  	get :show, :id => lesson.id
 	  	assert_response :success
 	  end
+
 =begin
 	  test "no user sign in redirect to sign in page" do
   		get :show
